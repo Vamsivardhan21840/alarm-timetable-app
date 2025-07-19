@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dynamic Alarm</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="alarm-box">
+      <h1>VAMSI's Alarm Scheduler</h1>
+
+      <label for="mode">Mode:</label>
+      <select id="mode">
+        <option value="alarm">Alarm</option>
+        <option value="timetable">Timetable</option>
+      </select>
+
+      <div id="alarm-section" class="mode-section">
+        <label for="alarm-time">Time:</label>
+        <input type="time" id="alarm-time" />
+
+        <label for="alarm-date">Date:</label>
+        <input type="date" id="alarm-date" />
+
+        <label for="alarm-day">Day:</label>
+        <select id="alarm-day">
+          <option>Sunday</option><option>Monday</option><option>Tuesday</option>
+          <option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option>
+        </select>
+
+        <label for="alarm-music">Alarm Song:</label>
+        <input type="file" id="alarm-music" accept="audio/*" />
+        <audio id="alarm-audio" preload="auto"></audio>
+
+        <button onclick="setAlarm()">Set Alarm</button>
+        <button onclick="stopAlarm()">Stop Alarm</button>
+      </div>
+
+      <div id="timetable-section" class="mode-section hidden">
+        <label for="work-time">Working Time:</label>
+        <input type="time" id="work-time" />
+
+        <label for="break-time">Break Time:</label>
+        <input type="time" id="break-time" />
+
+        <label for="lunch-time">Lunch Time:</label>
+        <input type="time" id="lunch-time" />
+
+        <label for="tt-music">Timetable Alarm Song:</label>
+        <input type="file" id="tt-music" accept="audio/*" />
+        <audio id="tt-audio" preload="auto"></audio>
+
+        <button onclick="setTimetable()">Set Timetable</button>
+        <button onclick="stopTimetableAlarm()">Stop Alarm</button>
+      </div>
+
+      <p id="message"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

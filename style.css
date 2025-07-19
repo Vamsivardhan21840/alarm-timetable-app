@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('https://res.cloudinary.com/dtjjgiitl/image/upload/q_auto:good,f_auto,fl_progressive/v1752936827/hvio2mori1zfyrv0ynmv.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #000;
+  color: white;
+  width: 90%;
+  max-width: 400px;
+}
+
+.alarm-box {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 30px;
+  border-radius: 20px;
+  width: 320px;
+  box-shadow: 0 0 15px #000;
+}
+
+.alarm-box h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+button {
+  margin-top: 15px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button:nth-of-type(2) {
+  background-color: #ff4d4d;
+}
+
+.hidden {
+  display: none;
+}
+
+#message {
+  text-align: center;
+  margin-top: 15px;
+  color: #ffc107;
+}
